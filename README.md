@@ -13,7 +13,7 @@ import GridChecker from 'grid-checker';
 
 And specify the layout you want to use:
 
-```
+```javascript
 new GridChecker({
     columns: 4,
     gutter: 20,
@@ -32,7 +32,7 @@ Currently the className is optional but will give you the option to avoid css na
 
 In order to update the values for different breakpoints you can add an array of settings.
 
-```
+```javascript
 new GridChecker({
     columns: 4,
     gutter: 20,
