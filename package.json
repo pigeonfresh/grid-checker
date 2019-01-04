@@ -4,6 +4,11 @@
   "description": "Grid-checker adds a grid-layout to your page to check alignment",
   "main": "src/GridLayout.ts",
   "repository": "https://github.com/pigeonfresh/grid-checker.git",
+  "keyword": [
+    "layout",
+    "grid",
+    "check"
+  ],
   "author": "pigeonfresh",
   "license": "MIT",
   "private": false
