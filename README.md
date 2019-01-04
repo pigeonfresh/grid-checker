@@ -24,6 +24,8 @@ new GridChecker({
 })
 ```
 
+Toggle the visibility of the grid by hitting 'g' on the keyboard.
+
 This will create a centered grid with a max-width of 1360px and 20px of padding on the left and right side.
 The grid will contain 4 columns with a flexible width separated by a gutter of 20px.
 Currently the className is optional but will give you the option to avoid css naming conflicts.
@@ -49,3 +51,10 @@ new GridChecker({
     ],
 })
 ```
+
+## To-dos
+- Make more settings optional
+- Optimizations
+- Include visual examples
+- Add custom key-combinations for toggling the grid
+- Explore more features
