@@ -53,6 +53,7 @@ new GridChecker({
 ```
 
 ## To-dos
+- Do more tests
 - Make more settings optional
 - Optimizations
 - Include visual examples
