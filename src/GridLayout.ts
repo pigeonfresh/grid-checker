@@ -1,7 +1,7 @@
 import { Breakpoint, Options } from './IGridLayout';
 import { className } from './classNames';
 
-class GridLayout {
+class GridChecker {
     private options:Options;
     private readonly totalColumns:number;
     private readonly gridClassName: string;
@@ -186,4 +186,4 @@ class GridLayout {
 }
 
 
-export default GridLayout;
+export default GridChecker;
