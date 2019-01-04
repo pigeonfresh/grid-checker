@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2017"
+    ],
+    "baseUrl": "./src/"
+  },
+  "include": [
+    "./src/types.d.ts",
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "./src/**/preset.js",
+    "./build-tools/config/storybook/config.js"
+  ]
+}
