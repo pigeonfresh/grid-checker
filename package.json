@@ -1,0 +1,10 @@
+{
+  "name": "grid-checker",
+  "version": "1.0.0",
+  "description": "Grid-checker adds a grid-layout to your page to check alignment",
+  "main": "index.js",
+  "repository": "https://github.com/pigeonfresh/grid-checker.git",
+  "author": "pigeonfresh",
+  "license": "MIT",
+  "private": false
+}
