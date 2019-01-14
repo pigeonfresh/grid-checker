@@ -1,25 +1,30 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "strict": true,
-    "target": "esnext",
-    "allowJs": true,
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "module": "esnext",
+    "baseUrl": "./src/",
+    "rootDir": "./src/",
+    "forceConsistentCasingInFileNames": true,
+    "module": "es2015",
     "moduleResolution": "node",
+    "noEmit": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "sourceMap": true,
     "lib": [
       "DOM",
       "DOM.Iterable",
       "ES2017"
-    ],
-    "baseUrl": "./src/"
+    ]
   },
   "include": [
-    "./src/types.d.ts",
-    "./src/**/*.ts"
-  ],
-  "exclude": [
-    "./src/**/preset.js",
-    "./build-tools/config/storybook/config.js"
+    "./src/**/*",
+    "./types/**/*.d.ts"
   ]
 }
