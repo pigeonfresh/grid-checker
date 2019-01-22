@@ -4,7 +4,7 @@ import { className } from './classNames';
 class GridChecker {
     private options:Options;
     private readonly totalColumns:number;
-    private readonly gridClassName: string;
+    private readonly gridClassName:string;
     private breakpoints:Array<Breakpoint>;
 
     constructor(options:Options) {

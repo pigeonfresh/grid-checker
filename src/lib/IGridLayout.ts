@@ -13,5 +13,5 @@ export interface Options {
   color: string;
   padding: number;
   className?: string;
-  breakpoints?: Array<Breakpoint>;
+  breakpoints?: Array<Breakpoint> | Array<null>;
 }
