@@ -1,11 +1,12 @@
 {
   "name": "grid-checker",
-  "version": "1.0.0",
-  "description": "Grid-checker adds a grid-layout to your page to check alignment",
-  "main": "src/GridLayout.ts",
+  "version": "1.0.1",
+  "description": "Grid checker adds a grid-layout to your page to check alignment",
+  "main": "lib/index.js",
   "repository": "https://github.com/pigeonfresh/grid-checker.git",
   "scripts": {
-    "build": "tsc src/GridChecker"
+    "prepublishOnly": "npm-run-all -s build",
+    "build": "tsc --p ./tsconfig.build.json"
   },
   "keyword": [
     "layout",
