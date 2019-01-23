@@ -1,7 +1,11 @@
 # Changes to grid checker
 
 
-### 1.0.5 (Jan 22 2019)
+### 1.0.6 (Jan 23 2019)
+
+* Fix typo
+
+### 1.0.5 (Jan 23 2019)
 
 * Update README
 
