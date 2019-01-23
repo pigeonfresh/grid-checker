@@ -1,15 +1,21 @@
 {
   "name": "grid-checker",
-  "version": "0.0.0",
+  "version": "1.0.4",
   "description": "",
-  "keywords": [],
+  "keyword": [
+    "layout",
+    "grid",
+    "check",
+    "RWD",
+    "responsive"
+  ],
   "main": "dist/grid-checker.umd.js",
   "module": "dist/grid-checker.es5.js",
   "typings": "dist/types/grid-checker.d.ts",
   "files": [
     "dist"
   ],
-  "author": "eelke <eelkevanderbij.prive+github@gmail.com>",
+  "author": "pigeonfresh",
   "repository": {
     "type": "git",
     "url": ""
@@ -113,7 +119,7 @@
     "tslint-config-prettier": "^1.15.0",
     "tslint-config-standard": "^8.0.1",
     "typedoc": "^0.12.0",
-    "typescript": "^3.0.3",
+    "typescript": "^3.2.2",
     "travis-deploy-once": "^5.0.9"
   }
 }
