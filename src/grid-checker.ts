@@ -41,7 +41,7 @@ class GridChecker {
   };
 
   private toggleGrid = ():void => {
-    const grid = <HTMLElement>window.document.querySelector(`.${this.gridClassName}`);
+    const grid = window.document.querySelector(`.${this.gridClassName}`) as HTMLElement;
     grid.classList.toggle(`${className.isActive}`);
   };
 
@@ -110,7 +110,7 @@ class GridChecker {
       .filter(breakpoint => breakpoint.columns !== undefined)
       .map((item, i) => ({
         threshold: item.threshold - 1,
-        columns: i === 0 ? this.options.columns + 1 : <number>this.breakpoints[i].columns + 1,
+        columns: i === 0 ? this.options.columns + 1 : this.breakpoints[i].columns as number + 1,
       }))
       .forEach(mq => {
         const selector = `.${this.gridClassName} .${className.column}:nth-child(n+${mq.columns})`;
