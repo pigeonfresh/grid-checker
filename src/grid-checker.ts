@@ -1,5 +1,6 @@
 import { Breakpoint, Options } from './IGridLayout';
 import { className } from './classNames';
+import { cssVariableName } from './cssVariableName';
 
 class GridChecker {
   private options:Options;
@@ -66,10 +67,10 @@ class GridChecker {
   }
 
   private setupGridStyles():void {
-    document.documentElement.style.setProperty('--max-width', `${this.options.maxWidth}px`);
-    document.documentElement.style.setProperty('--color', this.options.color);
-    document.documentElement.style.setProperty('--padding', `${this.options.padding}px`);
-    document.documentElement.style.setProperty('--gutter', `${this.options.gutter}px`);
+    document.documentElement.style.setProperty(cssVariableName.maxWidth, `${this.options.maxWidth}px`);
+    document.documentElement.style.setProperty(cssVariableName.color, this.options.color);
+    document.documentElement.style.setProperty(cssVariableName.padding, `${this.options.padding}px`);
+    document.documentElement.style.setProperty(cssVariableName.gutter, `${this.options.gutter}px`);
 
     let style:HTMLStyleElement = document.createElement('style');
 
@@ -91,9 +92,9 @@ class GridChecker {
     this.breakpoints.forEach(breakpoint => {
       const mq = breakpoint.threshold;
       const selector = `.${this.gridClassName}`;
-      let cssVariables = breakpoint.gutter ? `--gutter: ${breakpoint.gutter}px; ` : '';
-      cssVariables += breakpoint.color ? `--color: ${breakpoint.color}; ` : '';
-      cssVariables += breakpoint.padding ? `--padding: ${breakpoint.padding}px; ` : '';
+      let cssVariables = breakpoint.gutter ? `${cssVariableName.gutter}: ${breakpoint.gutter}px; ` : '';
+      cssVariables += breakpoint.color ? `${cssVariableName.color}: ${breakpoint.color}; ` : '';
+      cssVariables += breakpoint.padding ? `${cssVariableName.padding}: ${breakpoint.padding}px; ` : '';
 
       styles += cssVariables
         ? this.createStylesForMediaQuery(mq, selector, cssVariables)
@@ -153,7 +154,7 @@ class GridChecker {
       `height: 100%; ` +
       `margin: 0 auto; ` +
       `position: relative; ` +
-      `max-width: var(--max-width); ` +
+      `max-width: var(${cssVariableName.maxWidth}); ` +
       `}`;
   };
 
@@ -164,7 +165,7 @@ class GridChecker {
       `display: flex; ` +
       `flex-direction: row; ` +
       `margin: 0; ` +
-      `padding: 0 var(--padding); ` +
+      `padding: 0 var(${cssVariableName.padding}); ` +
       `list-style: none; ` +
       `}`;
   };
@@ -172,11 +173,11 @@ class GridChecker {
   private createColumnStyles():string {
     return `.${this.gridClassName} .${className.column} {` +
       `width: 100%; ` +
-      `background: var(--color);` +
+      `background: var(${cssVariableName.color});` +
       `opacity: 0.5; ` +
       `} ` +
       `.${this.gridClassName} .${className.column}:not(:first-of-type) {` +
-      `  margin-left: var(--gutter); ` +
+      `  margin-left: var(${cssVariableName.gutter}); ` +
       `}`;
   }
 
