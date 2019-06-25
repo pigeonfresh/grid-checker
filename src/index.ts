@@ -1,4 +1,3 @@
-import { default as _export } from './lib/GridChecker';
-// export { default as IGridLayout } from './lib/IGridLayout';
+import { default as _export } from './lib/GridChecker'
 
-export default _export;
+export default _export
