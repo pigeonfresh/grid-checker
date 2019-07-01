@@ -121,7 +121,7 @@ class GridChecker {
 
   private getInitialColumnsSettings = (): string => {
     const selector = this.getNthChildSelector(this.options.columns + 1)
-    const mq = this.breakpoints[0].threshold
+    const mq = this.breakpoints[0].threshold - 1
     const styling = GridChecker.DISPLAY_NONE
     return this.mediaQueryStyles(mq, selector, styling, false)
   }
